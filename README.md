@@ -1,52 +1,151 @@
-# Project Overview
+# 🏅 Olympic Medal Prediction – Beginner ML Project
 
-In this tutorial, we'll cover the full process of building a beginner machine learning project. This includes creating a hypothesis, setting up the model, and measuring error. By the end, you'll understand how to build an end-to-end machine learning project using Python and Jupyter.
+This project walks through a **complete end-to-end Machine Learning workflow** using historical Olympic data. The goal is to **predict how many medals a country will win** based on past performance and related features.
 
-To make this interesting, we'll use a fun dataset. We'll use data from historical Olympic games. We'll try to predict how many medals a country will win based on historical and current data.
+It’s designed especially for **beginners who want practical ML experience** using Python and Jupyter Notebook.
 
+---
 
-# Machine learning project steps
+## 📌 Project Goal
 
-Most machine learning projects follow a similar outline, which we'll also follow here.  This outline will help you tackle any machine learning problem.
+We use historical Olympic data to answer:
 
-**Project Steps**
+> **Can we predict the number of medals a country will win in a given Olympic year?**
 
-1. Form a hypothesis.
-2. Find and explore the data.
-3. (If necessary) Reshape the data to predict your target.
-4. Clean the data for ML.
-5. Pick an error metric.
-6. Split your data.
-7. Train a model.
+This project covers everything from hypothesis creation to model evaluation.
 
-## Code
+---
 
-You can find the code for this project [here](https://github.com/dataquestio/project-walkthroughs/tree/master/beginner_ml).
+## 🧠 Machine Learning Workflow
 
-File overview:
+This project follows a standard ML pipeline that can be reused for other real-world problems:
 
-* `machine_learning.ipynb` - the main project code
-* `data_prep.ipynb` - the code to generate the team-level dataset from an athlete-level dataset
+1. **Form a hypothesis**
+   Countries that performed well in previous Olympics are likely to win more medals in future games.
 
-# Local Setup
+2. **Find and explore the data**
+   Use historical Olympic datasets.
 
-## Installation
+3. **Reshape the data**
+   Convert athlete-level data into country-level medal summaries.
 
-To follow this project, please install the following locally:
+4. **Clean the data**
+   Handle missing values and prepare features for ML.
 
-* Python 3.8+
-* Python packages
-    * pandas
-    * numpy
-    * scikit-learn
-    * seaborn
+5. **Choose an error metric**
+   Measure how far our predictions are from actual medal counts.
 
+6. **Split the data**
+   Train/test split to evaluate model performance.
 
-## Data
+7. **Train a model**
+   Use a regression model to predict medal counts.
 
-We'll be using data from the Olympics, which was originally on [Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results).
+---
 
-You can download the files we'll use in this project here:
+## 📂 Project Structure
 
-* [teams.csv](https://drive.google.com/uc?export=download&id=1L3YAlts8tijccIndVPB-mOsRpEpVawk7) - the team-level data that we use in this project.
-* [athlete_events.csv](https://drive.google.com/uc?export=download&id=1Ah4wOyNFMGREq8Yw_Jbv7u2CeI_6tpn5) - this is the original athlete-level data
+```
+📁 olympic-ml-project
+│
+├── machine_learning.ipynb   # Main notebook with ML workflow
+├── data_prep.ipynb          # Converts athlete-level data to team-level data
+├── teams.csv                # Processed team-level dataset
+├── athlete_events.csv       # Original athlete-level dataset
+└── README.md                # Project documentation
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* **Python 3.8+**
+* **Pandas** – data manipulation
+* **NumPy** – numerical operations
+* **Scikit-learn** – machine learning models
+* **Seaborn** – data visualization
+* **Jupyter Notebook** – development environment
+
+---
+
+## 📊 Dataset
+
+We use the **120 Years of Olympic History** dataset.
+
+**Files used:**
+
+* `athlete_events.csv` – Raw athlete-level Olympic data
+* `teams.csv` – Aggregated country-level dataset used for prediction
+
+Original dataset source: Olympic history dataset from Kaggle.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/olympic-ml-project.git
+cd olympic-ml-project
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install pandas numpy scikit-learn seaborn jupyter
+```
+
+### 3️⃣ Run Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+* `data_prep.ipynb` → to understand data transformation
+* `machine_learning.ipynb` → for the full ML project
+
+---
+
+## 🔍 What You’ll Learn
+
+By completing this project, you will understand:
+
+✔ How to go from **raw data to ML-ready dataset**
+✔ How to **engineer features** from historical records
+✔ How to **train a regression model**
+✔ How to **evaluate prediction error**
+✔ How a **real ML project pipeline** looks end-to-end
+
+---
+
+## 📈 Model Output
+
+The model predicts:
+
+> 🏆 **Total medals a country is expected to win** in a given Olympic year.
+
+We evaluate performance using an error metric like **Mean Absolute Error (MAE)** to understand how far predictions are from actual results.
+
+---
+
+## 🚀 Future Improvements
+
+* Add more features like GDP, population, or host country advantage
+* Try advanced models (Random Forest, XGBoost)
+* Build a simple dashboard to visualize predictions
+* Deploy the model as a small web app
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. If you’d like to improve the model, add features, or enhance documentation, feel free to contribute.
+
+---
+
+## 📜 License
+
+This project is for educational purposes and is free to use for learning and experimentation.
